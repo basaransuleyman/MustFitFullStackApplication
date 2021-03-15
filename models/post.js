@@ -1,0 +1,75 @@
+const mongoose = require('mongoose');
+const {ObjectId} = mongoose.Schema.Types
+const postSchema = new mongoose.Schema({
+    name:{
+        type:String,
+        required:true
+    },
+    age:{
+        type:String,
+        required:true 
+    },
+    yagOrani:{
+		type:String,
+        required:true 
+    },
+    message:{
+    	type:String,
+    	required:true
+    },
+    messagetwo:{
+    	type:String,
+    	required:true
+    },
+    messageone:{
+        type:String,
+    	required:true
+    },
+    bm:{
+    	type:String,
+    	required:true
+    },
+    dealweight:{
+    	type:String,
+    	required:true
+    },
+    bmr:{
+    	type:String,
+    	required:true
+    },
+    height:{
+        type:String,
+        required:true
+    },
+    weight:{
+        type:String,
+        required:true     
+    },
+    neck:{
+        type:String,
+        required:true
+    },
+    belly:{
+        type:String,
+        required:true 
+    },
+    hip:{
+        type:String,
+        required:true
+    },
+    selected:{
+ 		type:String,
+        required:true
+    },
+    choices:{
+    	type:String,
+        required:true
+    },
+    postedBy:{
+    	type:ObjectId,
+    	ref:"User"
+    }
+})
+
+mongoose.model("Post",postSchema);
+
